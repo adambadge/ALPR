@@ -27,9 +27,9 @@ def take_photo():
     return image_dir+'low_'+image_filename
 
 
-def image_to_plate(image_file):
+def image_to_plate(image_file, token):
 
-    token      = '2ef17db4e347230cd37aa1da1cb41d4571633dc6'
+    
     end_point  = 'https://platerecognizer.com/plate-reader/'
     header     = {'Authorization': 'token {}'.format(token)}
     with open(image_file, 'rb') as fp:
